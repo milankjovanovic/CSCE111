@@ -6,12 +6,14 @@ public class JingleBellsMain extends JFrame {
 
   private JButton websiteButton = new JButton("Website");
   private JButton videoButton = new JButton("Video");
+  private JButton triviaGameButton = new JButton("Trivia Game");
 
   public JingleBellsMain() {
     super("Jingle Bells");
 
     pane.add(websiteButton, BorderLayout.CENTER);
     pane.add(videoButton, BorderLayout.WEST);
+    pane.add(triviaGameButton, BorderLayout.EAST);
 
     add(pane, BorderLayout.CENTER);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,9 +40,11 @@ public class JingleBellsMain extends JFrame {
 
   private void run() {
     WebsiteClass websiteClass = new WebsiteClass("https://www.google.com/");
-    VideoClass videoClass = new VideoClass();
+    VideoClass videoClass = new VideoClass("https://www.youtube.com/watch?v=fkhKg-WLohk");
+    TriviaGame triviaGameClass = new TriviaGame();
 
     websiteButton.addActionListener(websiteClass);
     videoButton.addActionListener(videoClass);
+    triviaGameButton.addActionListener(triviaGameClass);
   }
 }
