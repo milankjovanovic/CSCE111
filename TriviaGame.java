@@ -33,7 +33,7 @@ class TriviaGame implements ActionListener {
       JOptionPane.showMessageDialog(null, "You are correct! ");
       Score = Score + 20;
     }// end if
-    else {
+    if(button2.isSelected()) {
       JOptionPane.showMessageDialog(null, "You are incorrect ");
     }// end else
     panel.remove(button1);
@@ -46,7 +46,7 @@ class TriviaGame implements ActionListener {
        JOptionPane.showMessageDialog(null, "You are correct! ");
        Score = Score + 20;
      }// end if
-     else {
+     if(button4.isSelected()) {
        JOptionPane.showMessageDialog(null, "You are incorrect ");
      }// end else
      panel.remove(button3);
@@ -58,7 +58,7 @@ class TriviaGame implements ActionListener {
      if(button5.isSelected()) {
         JOptionPane.showMessageDialog(null, "You are incorrect. Jingle Bells was first published by James Lord Pierpont in 1857.");
       }// end if
-      else {
+      if(button6.isSelected()) {
         JOptionPane.showMessageDialog(null, "You are correct! ");
         Score = Score + 20;
       }// end else
@@ -72,7 +72,7 @@ class TriviaGame implements ActionListener {
          JOptionPane.showMessageDialog(null, "You are incorrect. There is debate as to whether Jingle Bells was written in Massachusetts or Georgia,\n" +
          "though it is known for certain that it was not written in Florida which is where Pierpont died.");
        }// end if
-       else {
+       if(button8.isSelected()) {
          JOptionPane.showMessageDialog(null, "You are correct! ");
          Score = Score + 20;
        }// end else
@@ -86,7 +86,7 @@ class TriviaGame implements ActionListener {
           JOptionPane.showMessageDialog(null, "You are correct! ");
           Score = Score + 20;
         }// end if
-        else {
+        if(button10.isSelected()) {
           JOptionPane.showMessageDialog(null, "You are incorrect. ");
         }// end else
         JOptionPane.showMessageDialog(null, "Your Score is: " + Score);
