@@ -15,6 +15,8 @@ import java.awt.event.*;
 import java.io.IOException;
 
 public class AnimationClass implements ActionListener{
+  private JFrame mainFrame;
+  private Music jingleBells = new Music("Jingle Bells - Frank Sinatra (1).wav");
 
   public static void Snowman() throws IOException, InterruptedException
   {
@@ -38,24 +40,31 @@ public class AnimationClass implements ActionListener{
 
   }  //end Snowman
 
+  public AnimationClass(JFrame main) {
+    mainFrame = main;
+  }
+
   @Override
   public void actionPerformed(ActionEvent t) {
     try {
+      mainFrame.toBack();
+      jingleBells.startMusic();
       Snowman();
+      jingleBells.stopMusic();  
     }
     catch (Exception r) {
       System.out.println("Cannot do that");;
     }
   }
-  public static void cls() {
-    try{
-      new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
-    }
-    catch (Exception e) {
-      System.out.println("\033[H\033[2J");
 
+  public static void cls(){ //clears screen - Robert Lightfoot
+    try {
+      new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+    } catch (Exception e) {
+      System.out.println("\033[H\033[2J");//for Mac
     }
-  }
+  }//end cls
+
   public static void print(ArrayList<String> printable)
   {
     for(int k = 0; k < printable.size(); k++)
@@ -67,12 +76,12 @@ public class AnimationClass implements ActionListener{
   //animating the snowman party
   public static void animate(ArrayList<String> printable) throws InterruptedException
   {
-    cls();
       // the throws InterruptedException-> sleep command for the gap between each
       int leftMove = 12;
       for(int path = 0; path < leftMove; path++)
       {
       Thread.sleep(1000);
+      cls();
         for(int k = 0; k < printable.size(); k++)
         {
           for(int space = leftMove; space > path; space--)

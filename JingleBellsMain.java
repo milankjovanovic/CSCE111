@@ -27,24 +27,19 @@ public class JingleBellsMain extends JFrame {
     getContentPane().setBackground(new Color(43, 119, 197));
     pane.setOpaque(false);
     textPane.setOpaque(false);
-    pane.setLayout( new FlowLayout(FlowLayout.CENTER, 3, 175));
-    websiteButton.setPreferredSize( new Dimension(100, 30));
-    videoButton.setPreferredSize( new Dimension(100, 30));
-    animationButton.setPreferredSize( new Dimension(100, 30));
-    triviaGameButton.setPreferredSize( new Dimension(100, 30));
+    pane.setLayout(new FlowLayout(FlowLayout.CENTER, 3, 175));
+    websiteButton.setPreferredSize(new Dimension(100, 30));
+    videoButton.setPreferredSize(new Dimension(100, 30));
+    animationButton.setPreferredSize(new Dimension(100, 30));
+    triviaGameButton.setPreferredSize(new Dimension(100, 30));
 
     add(textPane, BorderLayout.NORTH);
     add(pane, BorderLayout.CENTER);
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setPreferredSize(new Dimension(500, 500));
+    setPreferredSize(new Dimension(600, 600));
+    setResizable(false);
     pack();
   }
-
-
-
-
-
-
 
 
 
@@ -68,7 +63,7 @@ public class JingleBellsMain extends JFrame {
     WebsiteClass websiteClass = new WebsiteClass("http://people.tamu.edu/~milankjovanovic/JingleBells/JingleBellsSong.html");
     VideoClass videoClass = new VideoClass("https://www.youtube.com/watch?v=fkhKg-WLohk");
     TriviaGame triviaGameClass = new TriviaGame();
-    AnimationClass animationClass = new AnimationClass();
+    AnimationClass animationClass = new AnimationClass(this);
 
     websiteButton.addActionListener(websiteClass);
     videoButton.addActionListener(videoClass);
