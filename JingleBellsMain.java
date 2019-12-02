@@ -68,9 +68,11 @@ public class JingleBellsMain extends JFrame {
     WebsiteClass websiteClass = new WebsiteClass("http://people.tamu.edu/~milankjovanovic/JingleBells/JingleBellsSong.html");
     VideoClass videoClass = new VideoClass("https://www.youtube.com/watch?v=fkhKg-WLohk");
     TriviaGame triviaGameClass = new TriviaGame();
+    AnimationClass animationClass = new AnimationClass();
 
     websiteButton.addActionListener(websiteClass);
     videoButton.addActionListener(videoClass);
     triviaGameButton.addActionListener(triviaGameClass);
+    animationButton.addActionListener(animationClass);
   }
 }
