@@ -42,7 +42,7 @@ public class AnimationClass implements ActionListener{
 
   public AnimationClass(JFrame main) {
     try {
-      jingleBells = new Music("Jingle Bells - Frank Sinatra (1).wav");  
+      jingleBells = new Music("Jingle Bells - Frank Sinatra (1).wav");
     } catch (Exception e) {
       System.err.println("Could not initalize song");
     }
@@ -55,7 +55,9 @@ public class AnimationClass implements ActionListener{
       mainFrame.toBack();
       jingleBells.startMusic();
       Snowman();
+      Thread.sleep(1000);
       jingleBells.stopMusic();
+      mainFrame.toFront();
     }
     catch (Exception r) {
       System.out.println("Cannot do that");;
