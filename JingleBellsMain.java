@@ -30,8 +30,8 @@ public class JingleBellsMain extends JFrame {
     textPane.add(jlabel);
 
     // Add buttons to the panel
-    pane.add(videoButton);
     pane.add(animationButton);
+    pane.add(videoButton);
     pane.add(websiteButton);
     pane.add(triviaGameButton);
 
@@ -54,7 +54,7 @@ public class JingleBellsMain extends JFrame {
     add(textPane, BorderLayout.NORTH);
     add(pane, BorderLayout.CENTER);
 
-    // Setup the JFrame    
+    // Setup the JFrame
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setPreferredSize(new Dimension(600, 600));
     setResizable(false);
