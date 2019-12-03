@@ -50,9 +50,13 @@ public class JingleBellsMain extends JFrame {
     try {
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (UnsupportedLookAndFeelException e) {
+      System.err.println("Could not set look and feel");
     } catch (ClassNotFoundException e) {
+      System.err.println("Could not set look and feel");
     } catch (InstantiationException e) {
+      System.err.println("Could not set look and feel");
     } catch (IllegalAccessException e) {
+      System.err.println("Could not set look and feel");  
     }
     JingleBellsMain main = new JingleBellsMain();
     main.run();

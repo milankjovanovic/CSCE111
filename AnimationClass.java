@@ -16,7 +16,7 @@ import java.io.IOException;
 
 public class AnimationClass implements ActionListener{
   private JFrame mainFrame;
-  private Music jingleBells = new Music("Jingle Bells - Frank Sinatra (1).wav");
+  private Music jingleBells;
 
   public static void Snowman() throws IOException, InterruptedException
   {
@@ -41,6 +41,11 @@ public class AnimationClass implements ActionListener{
   }  //end Snowman
 
   public AnimationClass(JFrame main) {
+    try {
+      jingleBells = new Music("Jingle Bells - Frank Sinatra (1).wav");  
+    } catch (Exception e) {
+      System.err.println("Could not initalize song");
+    }
     mainFrame = main;
   }
 
@@ -50,7 +55,7 @@ public class AnimationClass implements ActionListener{
       mainFrame.toBack();
       jingleBells.startMusic();
       Snowman();
-      jingleBells.stopMusic();  
+      jingleBells.stopMusic();
     }
     catch (Exception r) {
       System.out.println("Cannot do that");;

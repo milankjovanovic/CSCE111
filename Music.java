@@ -3,9 +3,10 @@ import javax.sound.sampled.Clip;
 import java.io.File;
 
 public class Music {
-  Clip sound = AudioSystem.getClip();
+  Clip sound;
 
   public Music(String fileName) throws Exception {
+    sound = AudioSystem.getClip();
     sound.open(AudioSystem.getAudioInputStream(new File(fileName)));
   }
 
