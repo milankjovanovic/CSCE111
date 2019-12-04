@@ -1,3 +1,9 @@
+/*
+Matthew Stasia
+CSCE 111 - 505
+Made on a PC
+*/
+
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.Desktop;
